@@ -39,7 +39,7 @@ async function configureRoutes(fastify, options) {
             }
           }
         }
-      }, (req, reply) => {});
+      }, (req, reply) => {});  
 
 
 

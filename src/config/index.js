@@ -38,7 +38,7 @@ function configurePlugins(fastify, envConfig) {
           consumes: ['application/json'],
           produces: ['application/json']
         }
-      }); 
+      });  
 
 
       // Configure Blipp 

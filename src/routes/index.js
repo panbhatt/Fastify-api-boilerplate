@@ -13,43 +13,33 @@ async function configureRoutes(fastify, options) {
         return new Boom(200, "Error Occured");
     });
 
-    fastify.put('/some-route/:id', {
+    fastify.post('/some-route', {
         schema: {
-            description: 'post some data',
-            tags: ['user', 'code'],
-            summary: 'qwerty',
-            params: {
+          description: 'post some data',
+          tags: ['user', 'code'],
+          summary: 'qwerty',
+          payload: {
+            type: 'object',
+            properties: {
+              hello: { type: 'string' },
+              obj: {
                 type: 'object',
                 properties: {
-                    id: {
-                        type: 'string',
-                        description: 'user id'
-                    }
+                  some: { type: 'string' }
                 }
-            },
-            body: {
-                type: 'object',
-                properties: {
-                    hello: { type: 'string' },
-                    obj: {
-                        type: 'object',
-                        properties: {
-                            some: { type: 'string' }
-                        }
-                    }
-                }
-            },
-            response: {
-                201: {
-                    description: 'Successful response',
-                    type: 'object',
-                    properties: {
-                        hello: { type: 'string' }
-                    }
-                }
+              }
             }
+          },
+          out: {
+            description: 'Succesful response',
+            code: 201,
+            type: 'object',
+            properties: {
+              hello: { type: 'string' }
+            }
+          }
         }
-    }, (req, reply) => { return { "some": "abcd" }; });
+      }, (req, reply) => {});
 
 
 

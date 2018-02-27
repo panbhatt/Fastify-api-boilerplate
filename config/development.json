@@ -1,0 +1,11 @@
+{
+    "env": "development",
+    "port": 3000,
+    "db": {
+        "host": {
+            "ip": "localhost",
+            "port": 27017,
+            "name": "legalAgreementsDB"
+        }
+    }
+}

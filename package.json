@@ -1,0 +1,29 @@
+{
+  "name": "tam-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "backpack",
+    "build": "backpack build",
+    "start": "npm run build && node./build/main.js"
+  },
+  "dependencies": {
+    "boom": "^7.1.1",
+    "convict": "^4.0.2",
+    "fastify": "^1.0.0-rc.2",
+    "fastify-blipp": "^1.1.0",
+    "fastify-boom": "^0.0.3",
+    "fastify-helmet": "^1.0.3",
+    "fastify-jwt": "^0.2.1",
+    "fastify-mongodb": "^0.5.0",
+    "fastify-plugin": "^0.2.2",
+    "fastify-response-time": "^1.0.4",
+    "fastify-swagger": "^0.5.0",
+    "fastify-swagger-ui": "^1.0.1",
+    "pino": "^4.13.0"
+  },
+  "devDependencies": {
+    "backpack-core": "^0.5.0"
+  }
+}
